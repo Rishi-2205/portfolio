@@ -1,0 +1,13 @@
+/* particles sit behind content */
+#tsparticles-canvas-el { z-index: -20; pointer-events: none; }
+
+/* example glow + card-glass — ensure these exist */
+.glow {
+  text-shadow: 0 0 10px rgba(255, 90, 200, 0.14), 0 0 28px rgba(255, 90, 200, 0.06);
+}
+.card-glass {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.04);
+  backdrop-filter: blur(8px);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
