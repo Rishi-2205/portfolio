@@ -130,8 +130,8 @@ export default function App() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* Removed project file and images */}
               <div className="card-glass p-5 rounded-2xl">
-                <h4 className="text-xl font-semibold mb-2">Project Title</h4>
-                <p className="text-slate-300 text-sm">Project description goes here.</p>
+                <h4 className="text-xl font-semibold mb-2">ProtorBook management system </h4>
+                <p className="text-slate-300 text-sm">It"s my mini project in base of digital proctor Book</p>
                 <div className="mt-4 text-sm text-pink-300">
                   <a href="#" target="_blank" rel="noopener noreferrer">
                     View →
