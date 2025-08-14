@@ -8,7 +8,7 @@
         "build": "vite build",
         "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "git stash --include-untracked && gh-pages -d dist && git stash pop || true"
 },
     "dependencies": {
         "framer-motion": "^10.18.0",
