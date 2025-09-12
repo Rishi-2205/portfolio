@@ -1,27 +1,28 @@
 {
-    "name": "creative-portfolio",
-    "version": "1.0.0",
-    "private": true,
-    "homepage": "https://rishi-2205.github.io/portfolio/",
-    "scripts": {
-        "dev": "vite",
-        "build": "vite build",
-        "preview": "vite preview",
+  "name": "creative-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "homepage": "https://rishi-2205.github.io/portfolio/",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "git stash --include-untracked && gh-pages -d dist && git stash pop || true"
-},
-    "dependencies": {
-        "framer-motion": "^10.18.0",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "react-tsparticles": "^2.12.2",
-        "react-typed": "^2.0.12",
-        "tsparticles": "^2.12.0"
-    },
-    "devDependencies": {
-        "autoprefixer": "^10.4.14",
-        "postcss": "^8.4.21",
-        "tailwindcss": "^3.4.7",
-        "vite": "^7.1.1"
-    }
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "framer-motion": "^10.18.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-tsparticles": "^2.12.2",
+    "react-typed": "^2.0.12",
+    "tsparticles": "^2.12.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.4.7",
+    "vite": "^7.1.1",
+    "gh-pages": "^6.1.1"
+  }
 }
