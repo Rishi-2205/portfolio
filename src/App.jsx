@@ -906,6 +906,16 @@ export default function App() {
   variants={sectionVariants}
   custom={4}
 >
+
+  {/* Section Title */}
+  <motion.h2
+    className="text-4xl font-bold mb-16 text-center text-pink-400 glow"
+    initial={{ opacity: 0, y: -40 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1, ease: "easeOut" }}
+  >
+    🧑‍💻 CONTACT AND COLLABE WITH ME !!!
+  </motion.h2>
   {/* Curved background with gradient sweep */}
   <div className="absolute inset-0 -z-10 overflow-hidden">
     <svg
@@ -933,6 +943,7 @@ export default function App() {
     <div className="absolute top-[50%] left-[20%] w-[350px] h-[350px] bg-gradient-to-tr from-indigo-500 to-purple-500 rounded-full blur-2xl animate-bounce opacity-25"></div>
     <div className="absolute top-[10%] left-[50%] w-[250px] h-[250px] bg-gradient-to-tr from-green-400 to-teal-500 rounded-full blur-2xl animate-ping opacity-20"></div>
   </div>
+  
 
   {/* Contact Card */}
   <div className="max-w-2xl mx-auto bg-slate-900/70 backdrop-blur-md p-8 rounded-3xl shadow-xl relative z-10 border border-pink-500">
@@ -958,6 +969,7 @@ export default function App() {
         </motion.a>
       ))}
     </div>
+   
 
     {/* Contact Info */}
     <motion.div
