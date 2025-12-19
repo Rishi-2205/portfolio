@@ -131,7 +131,7 @@ export default function App() {
     { name: "GitHub", url: "https://github.com/Rishi-2205", bg: "bg-gray-800", icon: <FaGithub /> },
     { name: "LinkedIn", url: "https://linkedin.com/in/rishi-akash-93607431b/", bg: "bg-blue-600", icon: <FaLinkedin /> },
     { name: "Instagram", url: "https://instagram.com/itz_rishi_error", bg: "bg-gradient-to-tr from-pink-500 via-purple-500 to-yellow-400", icon: <FaInstagram /> },
-    { name: "Resume", url: "/resume1.pdf", bg: "bg-pink-500", icon: <FaFileDownload />, download: true },
+    { name: "Resume", url: "/resume.pdf", bg: "bg-pink-500", icon: <FaFileDownload />, download: true },
   ];
 
   const link =[
@@ -169,7 +169,7 @@ export default function App() {
     className="text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-400 to-blue-400 tracking-wide"
     whileHover={{ scale: 1.05 }}
   >
-  I'M RISHIAKASH,WELCOME TO MY PORTFOLIO 🤍
+  I'M RISHIAKASH,WELCOME TO MY PORTFOLIO 
   </motion.h1>
 
   {/* Desktop Links */}
@@ -269,9 +269,9 @@ export default function App() {
           <AnimatePresence>
             {showLinks &&
               links.map((link, index) => {
-                const spacing = 400;
+                const spacing = 380;
                 const x = (index - (links.length - 1) / 2) * spacing;
-                const y = -95;
+                const y = -105;
 
                 return (
                   <motion.a
@@ -286,7 +286,8 @@ export default function App() {
                     whileHover={{
                       scale: 1.2,
                       rotate: 15,
-                      boxShadow: "0px 0px 20px rgba(211, 226, 124, 0.9)"
+                      boxShadow: "0px 0px 20px rgba(215, 12, 233, 0.9)",
+                      
                     }}
                     transition={{
                       type: "spring",
@@ -365,7 +366,7 @@ export default function App() {
       className="space-y-6"
       initial={{ opacity: 0, x: -60 }}
       whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 0.5 }}
       style={{ perspective: 1000 }}
     >
       {[
@@ -392,7 +393,7 @@ export default function App() {
             damping: 12,
           }}
           whileHover={{
-            scale: 1.08,
+            scale: 1.00,
             rotate: i % 2 === 0 ? 2 : -2,
             boxShadow: "0 0 30px #ff4da6, 0 0 60px #8c4eff",
           }}
@@ -437,11 +438,11 @@ export default function App() {
       </motion.div>
 
       <a
-        href="/resume1.pdf"
+        href="/resume.pdf"
         download
-        className="mt-6 inline-flex items-center gap-3 px-8 py-3 bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 rounded-xl text-white font-bold shadow-lg hover:scale-105 transition-transform"
+        className="mt-6 inline-flex items-center gap-3 px-8 py-3 bg-gradient-to-r from-yellow-500 via-purple-500 to-pink-500 rounded-xl text-white font-bold shadow-lg hover:scale-105 transition-transform"
       >
-        <FaFileDownload /> GET MY RESUME
+        <FaFileDownload /> EXPLORE MY RESUME
       </a>
     </motion.div>
   </div>
@@ -662,7 +663,7 @@ export default function App() {
         title: "Food Recommendation App",
         desc: "AI-powered app suggesting meals based on user preferences.",
         img: "/food2.png",
-        demo: "https://portfolio-eight-blond.vercel.app/",
+        demo: "https://my-food-woad.vercel.app/",
         code: "https://github.com/Rishi-2205/portfolio",
         tech: ["React", "Node.js", "Express", "MongoDB"],
         duration: "Apr 2025 - Jun 2025",
