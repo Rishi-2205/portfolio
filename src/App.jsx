@@ -76,7 +76,7 @@ const SkillBar = ({ skill, color, isOpen, delay }) => {
 };
 
 export default function App() {
-  const [showLinks, setShowLinks] = useState(false);
+  const [showLinks, setShowLinks] = useState(true);
   const [activeProject, setActiveProject] = useState(null);
   const [openCategories, setOpenCategories] = useState([]);
   const [open, setOpen] = useState(false);
@@ -101,8 +101,8 @@ export default function App() {
     {
       category: "Backend",
       skills: [
-        { name: "Node.js", level: 80, icon: <FaNodeJs className="text-green-500" /> },
-        { name: "Express.js", level: 75, icon: <SiExpress className="text-gray-300" /> },
+        // { name: "Node.js", level: 80, icon: <FaNodeJs className="text-green-500" /> },
+        // { name: "Express.js", level: 75, icon: <SiExpress className="text-gray-300" /> },
         { name: "Django", level: 70, icon: <SiDjango className="text-green-600" /> },
         { name: "Flask", level: 65, icon: <SiFlask className="text-gray-400" /> },
         { name: "Python", level: 85, icon: <FaPython className="text-blue-400" /> },
@@ -111,7 +111,7 @@ export default function App() {
     {
       category: "Database",
       skills: [
-        { name: "MongoDB", level: 78, icon: <SiMongodb className="text-green-400" /> },
+        // { name: "MongoDB", level: 78, icon: <SiMongodb className="text-green-400" /> },
         { name: "PostgreSQL", level: 82, icon: <SiPostgresql className="text-sky-500" /> },
         { name: "MySQL", level: 70, icon: <SiPostgresql className="text-blue-600" /> },
       ],
@@ -151,6 +151,72 @@ export default function App() {
     Database: "from-blue-500 to-cyan-600",
     "Tools & Others": "from-yellow-400 to-orange-500",
   };
+
+
+  // ===== HACKER SPIDER WEB (SOCIAL + TECH) =====
+const radiusSocial = 110;
+const radiusTech = 260;
+
+// 🔗 SOCIAL LINKS (INNER RING)
+const socialLinks = [
+  {
+    name: "GitHub",
+    icon: <FaGithub />,
+    url: "https://github.com/Rishi-2205",
+    angle: 315,
+    bg: "bg-gray-800",
+  },
+  {
+    name: "LinkedIn",
+    icon: <FaLinkedin />,
+    url: "https://linkedin.com/in/rishi-akash-93607431b/",
+    angle: 45,
+    bg: "bg-blue-600",
+  },
+  {
+    name: "Instagram",
+    icon: <FaInstagram />,
+    url: "https://instagram.com/itz_rishi_error",
+    angle: 200,
+    bg: "bg-gradient-to-tr from-pink-500 via-purple-500 to-yellow-400",
+  },
+  {
+    name: "Resume",
+    icon: <FaFileDownload />,
+    url: "/resume.pdf",
+    angle: 135,
+    bg: "bg-purple-600",
+    download: true,
+  },
+];
+
+// ⚙️ TECH STACK (OUTER RING)
+const techLinks = [
+  { name: "Python", icon: <FaPython />, angle: 260, bg: "bg-yellow-500" },
+  { name: "Django", icon: <SiDjango />, angle: 300, bg: "bg-green-700" },
+  { name: "SQL", icon: <SiPostgresql />, angle: 340, bg: "bg-sky-600" },
+  { name: "JavaScript", icon: <FaJsSquare />, angle: 20, bg: "bg-yellow-400" },
+  { name: "React", icon: <FaReact />, angle: 60, bg: "bg-cyan-400" },
+  { name: "HTML", icon: <FaHtml5 />, angle: 100, bg: "bg-orange-500" },
+  { name: "CSS", icon: <FaCss3Alt />, angle: 140, bg: "bg-blue-500" },
+];
+
+// 🧮 POSITION CALCULATION
+const withPosition = (links, radius) =>
+  links.map((link) => {
+    const rad = (link.angle * Math.PI) / 180;
+    return {
+      ...link,
+      x: Math.cos(rad) * radius,
+      y: Math.sin(rad) * radius,
+    };
+  });
+
+const socialWithPosition = withPosition(socialLinks, radiusSocial);
+const techWithPosition = withPosition(techLinks, radiusTech);
+
+
+
 
   return (
     <>
@@ -239,101 +305,166 @@ export default function App() {
   </AnimatePresence>
 </motion.nav>
 
-        {/* Hero Section */}
-        <header className="flex flex-col items-center justify-center py-28 relative text-center">
-          <motion.div
-            onClick={() => setShowLinks(!showLinks)}
-            initial={{ scale: 0.8, opacity: 0, y: -50 }}
-            animate={{
-              scale: [1, 1.1, 1],
-              y: [0, -10, 0],
-              opacity: 1,
-              boxShadow: [
-                "0px 0px 20px rgba(236,72,153,0.4)",
-                "0px 0px 40px rgba(139,92,246,0.6)",
-                "0px 0px 20px rgba(236,72,153,0.4)"
-              ]
-            }}
-            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-            whileHover={{ scale: 1.2 }}
-            className="relative cursor-pointer"
-          >
-            <img
-              src="/mypic.jpg"
-              alt="Rishi Akash"
-              className="w-44 h-44 rounded-full border-4 border-pink-400 shadow-xl object-cover"
-            />
-          </motion.div>
+{/* Hero Section */}
+<header className="flex flex-col items-center justify-center py-28 relative text-center overflow-hidden">
 
-          {/* Orbiting Links */}
-          <AnimatePresence>
-            {showLinks &&
-              links.map((link, index) => {
-                const spacing = 380;
-                const x = (index - (links.length - 1) / 2) * spacing;
-                const y = -105;
+  {/* 🕷️ SPIDER WEB CORE */}
+<div className="relative flex justify-center items-center mt-6">
 
-                return (
-                  <motion.a
-                    key={link.name}
-                    href={link.url}
-                    download={link.download || false}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    initial={{ x: 0, y: 0, opacity: 0, scale: 0 }}
-                    animate={{ x, y, opacity: 1, scale: 1.5, rotate: 360 }}
-                    exit={{ x: 0, y: 0, opacity: 0, scale: 0 }}
-                    whileHover={{
-                      scale: 1.2,
-                      rotate: 15,
-                      boxShadow: "0px 0px 20px rgba(215, 12, 233, 0.9)",
-                      
-                    }}
-                    transition={{
-                      type: "spring",
-                      stiffness: 250,
-                      damping: 25,
-                      delay: index * 0.15,
-                    }}
-                    className={`absolute flex items-center justify-center w-14 h-14 rounded-full text-white text-xl ${link.bg} shadow-lg`}
-                  >
-                    {link.icon}
-                  </motion.a>
-                );
-              })}
-          </AnimatePresence>
+  {/* CENTER PROFILE */}
+  <motion.div
+    onClick={() => setShowLinks(!showLinks)}
+    className="relative z-10"
+    animate={{ y: [0, -6, 0] }}
+    transition={{ duration: 3, repeat: Infinity }}
+    whileHover={{
+    scale: 1.08,
+    circle: "0 0 60px rgba(0,255,255,0.9)",
+  }}
+  >
+    <img
+      src="/mypic.jpg"
+      alt="Rishi Akash"
+      className="w-44 h-44 rounded-full border-4 border-cyan-400 shadow-xl object-cover"
+    />
 
-          {/* Typed Intro */}
-          <motion.div
-            className="mt-10 text-center"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 1 }}
-          >
-            <h1 className="text-lg text-pink-300 italic tracking-wide"><b>[👆CLICK MY PROFILE TO EXPLORE👆]</b></h1>
+    <motion.div
+      className="absolute inset-0 rounded-full border border-cyan-400/40"
+      animate={{ scale: [1, 1.18, 1], opacity: [0.2, 0.6, 0.2] }}
+      transition={{ duration: 2.5, repeat: Infinity }}
+    />
+  </motion.div>
 
-            <div className="mt-7 text-4xl md:text-6xl font-bold text-yellow-300 tracking-wide">
-              <Typed
-                strings={[
-                  "FULL STACK DEVELOPER",
-                  "CSE-STUDENT",
-                  "DESIGNER",
-                  "FREELANCER",
-                  "TECH ENTHUSIAST",
-                ]}
-                typeSpeed={80}
-                backSpeed={50}
-                backDelay={1200}
-                loop
-                showCursor={true}
-              />
-            </div>
+  {/* 🧠 CONNECTION LINES */}
+  <AnimatePresence>
+    {showLinks && (
+      <svg
+        className="absolute w-[420px] h-[420px] pointer-events-none"
+        viewBox="-210 -210 420 420"
+      >
+        {/* Inner Ring */}
+        <circle
+          cx="0"
+          cy="0"
+          r={radiusSocial}
+          stroke="rgba(0,255,255,0.35)"
+          strokeWidth="1"
+          fill="none"
+        />
 
-            <p className="mt-10 text-xl md:text-2xl font-bold text-red-100 italic tracking-wide max-w-3xl mx-auto">
-              A passionate Full Stack Developer and a final-year Computer Science & Engineering student. I love building clean, scalable, and efficient web applications that blend functionality with beautiful design.
-            </p>
-          </motion.div>
-        </header>
+        {/* Outer Ring */}
+        <circle
+          cx="0"
+          cy="0"
+          r={radiusTech}
+          stroke="rgba(0,255,255,0.2)"
+          strokeWidth="1"
+          fill="none"
+        />
+
+        {[...socialWithPosition, ...techWithPosition].map((link, i) => (
+          <motion.line
+            key={i}
+            x1="0"
+            y1="0"
+            x2={link.x}
+            y2={link.y}
+            stroke="rgba(0,255,255,0.6)"
+            strokeWidth="1"
+            strokeDasharray="3 6"
+            animate={{ pathLength: [0, 1, 0] }}
+            transition={{ duration: 3, repeat: Infinity, delay: i * 0.2 }}
+          />
+        ))}
+      </svg>
+    )}
+  </AnimatePresence>
+
+  {/* 🔗 SOCIAL ICONS */}
+  <AnimatePresence>
+    {showLinks &&
+      socialWithPosition.map((link, i) => (
+        <motion.a
+          key={link.name}
+          href={link.url}
+          target="_blank"
+          className={`absolute w-14 h-14 rounded-full flex items-center justify-center text-white text-xl ${link.bg}`}
+          animate={{ x: link.x, y: link.y }}
+          whileHover={{ scale: 1.3 }}
+        >
+          {link.icon}
+        </motion.a>
+      ))}
+  </AnimatePresence>
+
+  {/* ⚙️ TECH ICONS */}
+  <AnimatePresence>
+  {showLinks && (
+    <motion.div
+      className="absolute inset-0"
+      animate={{ rotate: 360 }}
+      transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+    >
+      {techWithPosition.map((tech) => (
+        <motion.div
+          key={tech.name}
+          className={`absolute w-10 h-10 rounded-full flex items-center justify-center text-white text-sm ${tech.bg}`}
+          style={{
+            transform: `translate(${tech.x}px, ${tech.y}px)`,
+            opacity: 0.7,
+            pointerEvents: "none",
+          }}
+          whileHover={{ scale: 1.2, opacity: 1 }}
+          title={tech.name}
+        >
+          {tech.icon}
+        </motion.div>
+      ))}
+    </motion.div>
+  )}
+</AnimatePresence>
+
+</div>
+
+
+  {/* HERO TEXT */}
+  <motion.div
+    className="mt-24 text-center"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ delay: 1 }}
+  >
+    <motion.div
+  className="text-cyan-300 text-sm tracking-[0.3em] uppercase mb-6"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: [0, 1, 0.6, 1] }}
+  transition={{ duration: 3, repeat: Infinity }}
+>
+  SYSTEM ONLINE • FULL STACK MODULES ACTIVE
+</motion.div>
+
+    <div className="mt-9 text-4xl md:text-5xl font-bold text-yellow-300">
+      <Typed
+        strings={[
+          "INITIALIZING FULL STACK ENVIRONMENT",
+          "CONNECTING FRONTEND & BACKEND",
+          "DEPLOYMENT READY",
+          "FULL STACK DEVELOPER",
+          "DESIGNER",
+          "TECH ENTHUSIAST",
+        ]}
+        typeSpeed={45}
+        backSpeed={35}
+        backDelay={1500}
+        loop
+      />
+    </div>
+  </motion.div>
+
+</header>
+
+
+
 
         {/* Main Sections */}
         <main className="max-w-6xl mx-auto px-6 md:px-8 lg:px-0">
@@ -370,12 +501,15 @@ export default function App() {
       style={{ perspective: 1000 }}
     >
       {[
-        "💻 Turning ideas into reality with clean, creative code.",
-        "🎨 Passionate about Full-Stack Development & Innovative UI/UX.",
-        "🚀 React, Node.js, MongoDB, Tailwind CSS, Framer Motion.",
-        "💡 Problem Solver | Quick Learner | Team Player.",
-        "🌟 Mission: Simplify, Innovate & Inspire through tech.",
-        "⚡ AI & ML Enthusiast | Always Exploring New Technologies.",
+        "💻 Turning ideas into scalable, real-world applications using Python and modern web technologies.",
+        "🎨 Python Full Stack Developer with strong interest in building clean, intuitive, and high-performance user experiences.",
+        "🚀 Hands-on experience with Python, Django, Flask, React, REST APIs, and SQL.",
+        "⚡ Final-year Computer Science & Engineering student, actively building projects and strengthening problem-solving skills",
+        "🌟 Intermediate exposure to Machine Learning & Artificial Intelligence — data preprocessing, model training, and real-world AI use cases.",
+        "🎯 Passionate about continuous learning, open-source contribution, and making an impact in the tech world.",
+        "Career goal: Grow as a Python Full Stack Engineer and contribute to impactful software and intelligent systems.",
+        "Currently seeking entry-level opportunities where I can learn, contribute, and grow as a software engineer",
+        
       ].map((text, i) => (
         <motion.div
           key={i}
@@ -1102,3 +1236,4 @@ export default function App() {
     </>
   );
 }
+
