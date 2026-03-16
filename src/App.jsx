@@ -103,7 +103,7 @@ export default function App() {
       skills: [
         // { name: "Node.js", level: 80, icon: <FaNodeJs className="text-green-500" /> },
         // { name: "Express.js", level: 75, icon: <SiExpress className="text-gray-300" /> },
-        { name: "Django", level: 70, icon: <SiDjango className="text-green-600" /> },
+        { name: "Django", level: 30, icon: <SiDjango className="text-green-600" /> },
         // { name: "Flask", level: 65, icon: <SiFlask className="text-gray-400" /> },
         { name: "Python", level: 85, icon: <FaPython className="text-blue-400" /> },
       ],
