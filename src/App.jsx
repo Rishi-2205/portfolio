@@ -94,7 +94,7 @@ export default function App() {
         { name: "HTML", level: 95, icon: <FaHtml5 className="text-orange-500" /> },
         { name: "CSS", level: 90, icon: <FaCss3Alt className="text-blue-500" /> },
         { name: "JavaScript", level: 85, icon: <FaJsSquare className="text-yellow-400" /> },
-        { name: "React", level: 88, icon: <FaReact className="text-cyan-400" /> },
+        { name: "React", level: 30, icon: <FaReact className="text-cyan-400" /> },
         { name: "TailwindCSS", level: 92, icon: <SiTailwindcss className="text-sky-400" /> },
       ],
     },
@@ -104,7 +104,7 @@ export default function App() {
         // { name: "Node.js", level: 80, icon: <FaNodeJs className="text-green-500" /> },
         // { name: "Express.js", level: 75, icon: <SiExpress className="text-gray-300" /> },
         { name: "Django", level: 70, icon: <SiDjango className="text-green-600" /> },
-        { name: "Flask", level: 65, icon: <SiFlask className="text-gray-400" /> },
+        // { name: "Flask", level: 65, icon: <SiFlask className="text-gray-400" /> },
         { name: "Python", level: 85, icon: <FaPython className="text-blue-400" /> },
       ],
     },
@@ -112,8 +112,8 @@ export default function App() {
       category: "Database",
       skills: [
         // { name: "MongoDB", level: 78, icon: <SiMongodb className="text-green-400" /> },
-        { name: "PostgreSQL", level: 82, icon: <SiPostgresql className="text-sky-500" /> },
-        { name: "MySQL", level: 70, icon: <SiPostgresql className="text-blue-600" /> },
+        { name: "MySQL", level: 80, icon: <SiPostgresql className="text-sky-500" /> },
+        { name: "OracleSQL", level: 80, icon: <SiPostgresql className="text-blue-600" /> },
       ],
     },
     {
@@ -121,7 +121,7 @@ export default function App() {
       skills: [
         { name: "Git & GitHub", level: 90, icon: <FaGitAlt className="text-red-500" /> },
         { name: "VS Code", level: 95, icon: <FaPython className="text-blue-400" /> },
-        { name: "Docker", level: 60, icon: <FaDocker className="text-blue-500" /> },
+        { name: "Docker", level: 30, icon: <FaDocker className="text-blue-500" /> },
         { name: "Figma", level: 70, icon: <FaFigma className="text-pink-500" /> },
       ],
     },
@@ -183,7 +183,7 @@ const socialLinks = [
   {
     name: "Resume",
     icon: <FaFileDownload />,
-    url: "/resume.pdf",
+    url: "/RISHIAKASH.pdf",
     angle: 135,
     bg: "bg-purple-600",
     download: true,
@@ -572,7 +572,7 @@ const techWithPosition = withPosition(techLinks, radiusTech);
       </motion.div>
 
       <a
-        href="/resume.pdf"
+        href="/RISHIAKASH.pdf"
         download
         className="mt-6 inline-flex items-center gap-3 px-8 py-3 bg-gradient-to-r from-yellow-500 via-purple-500 to-pink-500 rounded-xl text-white font-bold shadow-lg hover:scale-105 transition-transform"
       >
@@ -1181,7 +1181,7 @@ const techWithPosition = withPosition(techLinks, radiusTech);
       <div className="relative z-10 max-w-6xl mx-auto text-center space-y-6">
         {/* Tagline */}
         <h2 className="text-2xl md:text-3xl font-bold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400">
-          🚀 Let’s Connect & Build Something Creative
+          🚀 Let's Connect & Build Something Creative
         </h2>
 
         {/* Quick Links */}
