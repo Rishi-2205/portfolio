@@ -183,7 +183,7 @@ const socialLinks = [
   {
     name: "Resume",
     icon: <FaFileDownload />,
-    url: "/RISHIAKASH.pdf",
+    url: "/rishi cv.pdf",
     angle: 135,
     bg: "bg-purple-600",
     download: true,
@@ -554,7 +554,7 @@ const techWithPosition = withPosition(techLinks, radiusTech);
         whileHover={{ rotate: 2 }}
       >
         <motion.img
-          src="/mypicc.jpg"
+          src="/pic 1.png"
           alt="Rishi Akash"
           className="w-[420px] object-cover rounded-3xl"
           whileHover={{ scale: 1.05, rotate: 2 }}
@@ -572,7 +572,7 @@ const techWithPosition = withPosition(techLinks, radiusTech);
       </motion.div>
 
       <a
-        href="/RISHIAKASH.pdf"
+        href="/rishi cv.pdf"
         download
         className="mt-6 inline-flex items-center gap-3 px-8 py-3 bg-gradient-to-r from-yellow-500 via-purple-500 to-pink-500 rounded-xl text-white font-bold shadow-lg hover:scale-105 transition-transform"
       >
