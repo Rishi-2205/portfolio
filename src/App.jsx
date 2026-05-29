@@ -131,7 +131,7 @@ export default function App() {
     { name: "GitHub", url: "https://github.com/Rishi-2205", bg: "bg-gray-800", icon: <FaGithub /> },
     { name: "LinkedIn", url: "https://linkedin.com/in/rishi-akash-93607431b/", bg: "bg-blue-600", icon: <FaLinkedin /> },
     { name: "Instagram", url: "https://instagram.com/itz_rishi_error", bg: "bg-gradient-to-tr from-pink-500 via-purple-500 to-yellow-400", icon: <FaInstagram /> },
-    { name: "Resume", url: "/resume.pdf", bg: "bg-pink-500", icon: <FaFileDownload />, download: true },
+    { name: "Resume", url: "/resumeupdated.pdf", bg: "bg-pink-500", icon: <FaFileDownload />, download: true },
   ];
 
   const link =[
@@ -183,7 +183,7 @@ const socialLinks = [
   {
     name: "Resume",
     icon: <FaFileDownload />,
-    url: "/rishi cv.pdf",
+    url: "/resumeupdated.pdf",
     angle: 135,
     bg: "bg-purple-600",
     download: true,
@@ -235,7 +235,7 @@ const techWithPosition = withPosition(techLinks, radiusTech);
     className="text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-400 to-blue-400 tracking-wide"
     whileHover={{ scale: 1.05 }}
   >
-  I'M RISHIAKASH,WELCOME TO MY PORTFOLIO 
+ I'M RISHIAKASH •FULL STACK DEVELOPER
   </motion.h1>
 
   {/* Desktop Links */}
@@ -440,7 +440,7 @@ const techWithPosition = withPosition(techLinks, radiusTech);
   animate={{ opacity: [0, 1, 0.6, 1] }}
   transition={{ duration: 3, repeat: Infinity }}
 >
-  SYSTEM ONLINE • FULL STACK MODULES ACTIVE
+  SYSTEM ONLINE • READY TO BUILD THE FUTURE 
 </motion.div>
 
     <div className="mt-9 text-4xl md:text-5xl font-bold text-yellow-300">
@@ -449,7 +449,7 @@ const techWithPosition = withPosition(techLinks, radiusTech);
           "INITIALIZING FULL STACK ENVIRONMENT",
           "CONNECTING FRONTEND & BACKEND",
           "DEPLOYMENT READY",
-          "FULL STACK DEVELOPER",
+          "PYTHON FULL STACK DEVELOPER",
           "DESIGNER",
           "TECH ENTHUSIAST",
         ]}
@@ -554,7 +554,7 @@ const techWithPosition = withPosition(techLinks, radiusTech);
         whileHover={{ rotate: 2 }}
       >
         <motion.img
-          src="/pic 1.png"
+          src="/coatsuit.jpeg"
           alt="Rishi Akash"
           className="w-[420px] object-cover rounded-3xl"
           whileHover={{ scale: 1.05, rotate: 2 }}
@@ -572,7 +572,7 @@ const techWithPosition = withPosition(techLinks, radiusTech);
       </motion.div>
 
       <a
-        href="/rishi cv.pdf"
+        href="/resumeupdated.pdf"
         download
         className="mt-6 inline-flex items-center gap-3 px-8 py-3 bg-gradient-to-r from-yellow-500 via-purple-500 to-pink-500 rounded-xl text-white font-bold shadow-lg hover:scale-105 transition-transform"
       >
@@ -794,12 +794,21 @@ const techWithPosition = withPosition(techLinks, radiusTech);
         duration: "Jan 2025 - Mar 2025",
       },
       {
+        title: "Employee Management System",
+        desc: "A comprehensive system for managing employee data, attendance, performance, roles and permissions.",
+        img: "/emploee.jpg",
+        demo: "https://portfolio-eight-blond.vercel.app/",
+        code: "https://github.com/Rishi-2205/portfolio",
+        tech: ["web technology", "Python", "Flask", "PostgreSQL"],
+        duration: "Jun 2025 - dec 2025",
+      },
+      {
         title: "Food Recommendation App",
         desc: "AI-powered app suggesting meals based on user preferences.",
         img: "/food2.png",
         demo: "https://my-food-woad.vercel.app/",
         code: "https://github.com/Rishi-2205/portfolio",
-        tech: ["React", "Node.js", "Express", "MongoDB"],
+        tech: ["html", "css", "javascript", "groq api"],
         duration: "Apr 2025 - Jun 2025",
       },
       {
@@ -808,7 +817,25 @@ const techWithPosition = withPosition(techLinks, radiusTech);
         img: "/face.jpg",
         demo: "https://portfolio-eight-blond.vercel.app/",
         code: "https://github.com/Rishi-2205/portfolio",
-        tech: ["React", "Python", "Flask", "SQLite"],
+        tech: ["React", "Python", "Django", "machine learning", "artificial intelligence"],
+        duration: "Jul 2025 - Sep 2025",
+      },
+      {
+        title: "soon-to-be-revealed-project",
+        desc: "The project is currently under construction and will be available soon.",
+        img: "/lock.jpg",
+        demo: "https://portfolio-eight-blond.vercel.app/",
+        code: "https://github.com/Rishi-2205/portfolio",
+        tech: ["React", "Python", "Django", "SQLite"],
+        duration: "Jul 2025 - Sep 2025",
+      },
+      {
+        title: "soon-to-be-revealed-project",
+        desc: "The project is currently under construction and will be available soon.",
+        img: "/lock.jpg",
+        demo: "https://portfolio-eight-blond.vercel.app/",
+        code: "https://github.com/Rishi-2205/portfolio",
+        tech: ["React", "Python", "Django", "SQLite"],
         duration: "Jul 2025 - Sep 2025",
       },
     ].map((project, idx) => (
@@ -1116,8 +1143,8 @@ const techWithPosition = withPosition(techLinks, radiusTech);
       <p className="mb-2 text-green-300">Send a message and I’ll get back to you soon!</p>
       <p className="mt-2 text-pink-400">
         <b>Email:</b>{" "}
-        <a href="mailto:rishiakash2205@gmail.com" className="text-pink-300 underline">
-          rishiakash2205@gmail.com
+        <a href="mailto:rishiak2205@gmail.com" className="text-pink-300 underline">
+          rishiak2205@gmail.com
         </a>
       </p>
       <p className="mt-1 text-pink-400">
@@ -1220,7 +1247,7 @@ const techWithPosition = withPosition(techLinks, radiusTech);
             <FaWhatsapp />
           </a>
           <a
-            href="mailto:rishiakash2205@gmail.com"
+            href="mailto:rishiak2205@gmail.com"
             className="hover:scale-125 transition-transform duration-300 hover:text-red-400"
           >
             <FaEnvelope />

@@ -25,10 +25,10 @@ export default function ParticleBackground() {
           },
         },
         particles: {
-          number: { value: 60, density: { enable: true, area: 800 } },
+          number: { value: 240, density: { enable: true, area: 850 } },
           color: { value: ["#7afcff", "#39FF14", "#ff8bd6"] },
-          links: { enable: true, distance: 130, color: "#1de9b6", opacity: 0.08 },
-          move: { enable: true, speed: 0.7, outModes: { default: "out" } },
+          links: { enable: true, distance: 130, color: "#1de9b6", opacity: 0.10 },
+          move: { enable: true, speed: 0.8, outModes: { default: "out" } },
           opacity: { value: 0.7 },
           size: { value: { min: 0.6, max: 2.4 } },
         },
