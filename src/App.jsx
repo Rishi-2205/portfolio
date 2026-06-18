@@ -131,7 +131,7 @@ export default function App() {
     { name: "GitHub", url: "https://github.com/Rishi-2205", bg: "bg-gray-800", icon: <FaGithub /> },
     { name: "LinkedIn", url: "https://linkedin.com/in/rishi-akash-93607431b/", bg: "bg-blue-600", icon: <FaLinkedin /> },
     { name: "Instagram", url: "https://instagram.com/itz_rishi_error", bg: "bg-gradient-to-tr from-pink-500 via-purple-500 to-yellow-400", icon: <FaInstagram /> },
-    { name: "Resume", url: "/resumeupdated.pdf", bg: "bg-pink-500", icon: <FaFileDownload />, download: true },
+    { name: "Resume", url: "/cv.pdf", bg: "bg-pink-500", icon: <FaFileDownload />, download: true },
   ];
 
   const link =[
@@ -183,7 +183,7 @@ const socialLinks = [
   {
     name: "Resume",
     icon: <FaFileDownload />,
-    url: "/resumeupdated.pdf",
+    url: "/cv.pdf",
     angle: 135,
     bg: "bg-purple-600",
     download: true,
@@ -572,7 +572,7 @@ const techWithPosition = withPosition(techLinks, radiusTech);
       </motion.div>
 
       <a
-        href="/resumeupdated.pdf"
+        href="/cv.pdf"
         download
         className="mt-6 inline-flex items-center gap-3 px-8 py-3 bg-gradient-to-r from-yellow-500 via-purple-500 to-pink-500 rounded-xl text-white font-bold shadow-lg hover:scale-105 transition-transform"
       >
